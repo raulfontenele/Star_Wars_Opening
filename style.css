@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+embed{
+    position: absolute;
+    z-index: 0;
+}
+.background{
+    background-image: url("https://sthils.com/wp-content/uploads/2019/05/IMG_20190517_055320.jpg");
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow:hidden;
+    position: relative;
+    z-index: 1;
+}
+.abertura-nome{
+    position: relative;
+    text-align: center;
+    top: auto;
+    font-size: 400px;
+    display: flex;
+    justify-content: center;
+    color: #b38f00;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: diminuicao 3s normal forwards;
+    z-index: 2;
+}
+@keyframes diminuicao{
+    0%{
+        transform: scale(10);
+    }
+    99%{
+        transform: scale(0.01);
+    }
+    100%{
+        transform: scale(0.01);
+        visibility: hidden;
+    }
+}
+
+.abertura {
+    position: absolute;
+    top: -4%; bottom: -11%; left: 24%; right: 24%;
+    z-index: 2;
+    transform: perspective(50em) rotateX(57deg);
+}
+.abertura p{
+    line-height: 3em;
+    font-size: 70px;
+    text-align: justify;
+    height: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.animation{
+    color: #b38f00;
+    animation: rolamento infinite 40s;
+    animation-play-state: initial;
+}
+.animation h2,h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 90px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+}
+.animation h3{
+    font-size: 80px;
+}
+
+@keyframes rolamento{
+    0%{
+        transform: translateY(2000px); 
+    }
+    100%{
+        transform: translateY(-10000px); 
+    }
+}
